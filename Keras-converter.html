@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>TVM converter</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <i class="fas fa-angle-double-right"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">TVM converter</div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Converters
+      </div>
+
+      <!-- Nav Item - Keras -->
+      <li class="nav-item">
+        <a class="nav-link" href="Keras-converter.html">
+          <i class="fas fa-fire"></i>
+          <span>Keras</span></a>
+      </li>
+
+      <!-- Nav Item - Pytorch -->
+      <li class="nav-item">
+        <a class="nav-link" href="pytorch-converter.html">
+          <i class="fas fa-fire"></i>
+          <span>PyTorch</span></a>
+      </li>
+
+      <!-- Nav Item - TensorFlow -->
+      <li class="nav-item">
+        <a class="nav-link" href="tensorflow-converter.html">
+          <i class="fas fa-fire"></i>
+          <span>TensorFlow</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-1 text-gray-800" style="padding-top: 5%"> Keras</h1>
+          <p class="mb-4"> Convert your Keras model here. HDFS .h5 file to TVM C++ dynamic library and parameters: 
+            .so, .json and .params) If model has custom components(layers, metrics), please provide them in second file.</p>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <div class="col-lg-6">
+
+              <!-- Overflow Hidden -->
+              <div class="card mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Keras TVM Converter</h6>
+                </div>
+                <div class="card-body">
+                  <div id="form_container">
+
+                    <form id="form_68106" class="appnitro" enctype="multipart/form-data" method="post" action="">
+
+                        <ul>
+                
+                            <div style="text-align: center;">&nbsp;</div>
+                            <div style="text-align: center;">&nbsp;</div>
+                
+                         <!--   <li id="li_1"></li> -->
+                                <label class="description" for="model_name">Model name </label>
+                                <div>
+                                    <div style="text-align: center;">&nbsp;</div>
+                                    <input id="model_name" name="model_name" class="element text medium" type="text" maxlength="255"
+                                           value=""/>
+                                </div>
+                                <p class="guidelines" id="guide_1">
+                                    <small>Unique name of the model, will be used as part of folder name and files names</small>
+                                </p>
+                           <!-- </li> -->
+                
+                          <!--  <li id="li_2"> -->
+                                <label class="description" for="model_h5">Upload Keras model (HDF5 fully compiled model) </label>
+                                <div>
+                                    <div style="text-align: center;">&nbsp;</div>
+                                    <input id="model_h5" name="model_h5" class="element file" type="file"/>
+                                </div>
+                                <p class="guidelines" id="guide_2">
+                                    <small>Keras model can be saved using:
+                                        model = Sequential()
+                                        ...
+                                        model.save('engine_regression.h5')
+                                    </small>
+                                </p>
+                           <!-- </li> -->
+                
+                            <div style="text-align: center;">&nbsp;</div>
+                            <div style="text-align: center;">&nbsp;</div>
+                
+                           <!-- <li id="li_3"> -->
+                                <label class="description" for="custom_py">Upload Keras's custom layer/metrics </label>
+                                <div>
+                                    <div style="text-align: center;">&nbsp;</div>
+                                    <input id="custom_py" name="custom_py" class="element file" type="file"/>
+                                </div>
+                          <!--  </li> -->
+                
+                            <div style="text-align: center;">&nbsp;</div>
+                            <div style="text-align: center;">&nbsp;</div>
+                
+                          <!--  <li class="buttons"> -->
+                                <input type="hidden" name="form_id" value="68106"/>
+                                <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit"/>
+                           <!-- </li> -->
+                        </ul>
+                    </form>
+                
+                    <div style="text-align: center;">&nbsp;</div>
+                    <div style="text-align: center;">&nbsp;</div>
+              
+                </div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Cisco IoT labs</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
